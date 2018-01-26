@@ -3,7 +3,6 @@ import NextDeparture from './../NextDeparture';
 import Layout from './../Layout';
 import Panel from './../Panel';
 import Marquee from './../Marquee';
-import Relative from './../Relative';
 
 const Platform = ({ width, height, data, top }) => {
   const next = data[0];
