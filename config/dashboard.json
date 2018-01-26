@@ -13,5 +13,6 @@
         "heading": "Östermalmstorg",
         "url": "https://api.sl.se/api2/realtimedeparturesV4.json?Bus=false&Key=b919c0b5f1ef4668869558aa2c4eacc1&Metro=true&Ship=false&SiteID=9206&TimeWindow=0&Train=false&Tram=false"
       }
+    }
   ]
 }
