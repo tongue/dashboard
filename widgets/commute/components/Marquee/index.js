@@ -19,7 +19,7 @@ class Marquee extends React.Component {
 
   componentDidUpdate (previousProps, previousState) {
     if (this.el) {
-      setTimeout(() => this.scroll(), 10);
+      setTimeout(() => this.scroll(), 20);
     }
   }
 
@@ -47,6 +47,7 @@ class Marquee extends React.Component {
         height={height}
         top={top}
         innerRef={(ref) => this.el = ref}
+        style={{ transform: 'translateY(-5%)' }}
       />
     );
   }

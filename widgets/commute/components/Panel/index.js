@@ -7,7 +7,7 @@ class Panel extends React.Component {
     if (this.el) {
       setTimeout(() => {
         const { height, width } = this.props;
-        renderPanel(this.el.getContext('2d'), width, height);
+        renderPanel(this.el.getContext('2d'), width, height, height * 2);
       }, 0);
     }
   }
@@ -18,9 +18,10 @@ class Panel extends React.Component {
     return (
       <Canvas
         width={width}
-        height={height}
+        height={height * 2}
         top={top}
         innerRef={(ref) => this.el = ref}
+        absolute
       />
     );
   }

@@ -1,14 +1,14 @@
 {
   "widgets": [
        {
-      "widget": "metro",
+      "widget": "commute",
       "props": {
         "heading": "Hötorget",
         "url": "https://api.sl.se/api2/realtimedeparturesV4.json?Bus=false&Key=b919c0b5f1ef4668869558aa2c4eacc1&Metro=true&Ship=false&SiteID=9119&TimeWindow=0&Train=false&Tram=false"
       }
     },
     {
-      "widget": "metro",
+      "widget": "commute",
       "props": {
         "heading": "Östermalmstorg",
         "url": "https://sl-dashboard-function.azurewebsites.net/api/HttpTriggerCSharp1?code=p43w/UaPattSU7ADIWhuh7C5TvGI/I96glxOyTDOF80taFol5A90uw=="

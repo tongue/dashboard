@@ -14,30 +14,20 @@ const Platform = ({ width, height, data, top }) => {
   ).join('   ');
 
   return (
-    <Layout top={top}>
-      <Relative width={width} height={height}>
-        <Panel width={width} height={height} />
-        <NextDeparture
-          height={height}
-          destination={next.Name}
-          time={next.Value}
-          line={next.Line}
-        />
-      </Relative>
-      <Relative width={width} height={height}>
-        <Panel
-          width={width}
-          height={height}
-          top={height}
-        />
-        <Marquee
-          width={width}
-          height={height}
-          top={height}
-        >
-          {message}
-        </Marquee>
-      </Relative>
+    <Layout>
+      <Panel width={width} height={height} />
+      <NextDeparture
+        height={height}
+        destination={next.Name}
+        time={next.Value}
+        line={next.Line}
+      />
+      <Marquee
+        width={width}
+        height={height}
+      >
+        {message}
+      </Marquee>
     </Layout>
   );
 };
