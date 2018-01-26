@@ -1,6 +1,7 @@
 import React from 'react';
 import Widget from '../../components/widget';
 import Platform from './components/Platform';
+import Heading from './components/Heading';
 
 const data = {
   'NorthEvents': [
@@ -54,10 +55,13 @@ class Commute extends React.Component {
 
   render () {
     const { width, height } = this.state;
+    const { heading } = this.props;
+
     return (
-      <Widget innerRef={(ref) => this.widget = ref} width={1} style={{ position: 'relative' }}>
+      <Widget unstyled innerRef={(ref) => this.widget = ref} width={1} style={{ position: 'relative' }}>
+        <Heading>{heading}</Heading>
         <Platform width={width} height={height} data={data.NorthEvents} />
-        <Platform width={width} height={height} data={data.SouthEvents} top={height * 2} />
+        <Platform width={width} height={height} data={data.SouthEvents} />
       </Widget>
     );
   }
