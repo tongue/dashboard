@@ -19,8 +19,13 @@ class Marquee extends React.Component {
 
   componentDidUpdate (previousProps, previousState) {
     if (this.el) {
-      setTimeout(() => this.scroll(), 20);
+      clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => this.scroll(), 20);
     }
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.timeout);
   }
 
   scroll () {
