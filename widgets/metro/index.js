@@ -121,7 +121,6 @@ class Metro extends Component {
 
     return (
       <Widget>
-        <Image src="http://www.emoji.co.uk/files/google-emojis/travel-places-android/7702-metro.png" />
         <Text>
           {this.props.heading}
         </Text>
