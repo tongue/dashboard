@@ -36,6 +36,7 @@ export const matrixShape = (height = 80, rows = 7, cols = 5, padding = 2) => {
 export function renderPanel (context, width, height, realHeight) {
   const shape = matrixShape(height);
 
+  context.clearRect(0, 0, width, height);
   for (let x = shape.pixel.offset; x < width; x += shape.pixel.distance) {
     for (let y = shape.pixel.offset; y < realHeight; y += shape.pixel.distance) {
       renderPixel(context, shape, x, y, shape.color.off);
