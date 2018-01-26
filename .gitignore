@@ -8,4 +8,5 @@ widgets/*
 !widgets/datetime
 !widgets/image
 !widgets/text
+!widgets/commute
 build
