@@ -55,11 +55,11 @@ class Commute extends React.Component {
 
   render () {
     const { width, height } = this.state;
-    const { heading } = this.props;
+    const { heading, lineColor } = this.props;
 
     return (
       <Widget unstyled innerRef={(ref) => this.widget = ref} width={1} style={{ position: 'relative' }}>
-        <Heading>{heading}</Heading>
+        <Heading lineColor={lineColor}>{heading}</Heading>
         <Platform width={width} height={height} data={data.NorthEvents} />
         <Platform width={width} height={height} data={data.SouthEvents} />
       </Widget>
