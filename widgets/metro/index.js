@@ -61,9 +61,8 @@ class Metro extends Component {
    * Default state.
    */
   state = {
-    ResponseData: {
-      Metros: []
-    }
+    NorthEvents: [],
+    SouthEvents: []
   };
 
   /**
@@ -115,22 +114,21 @@ class Metro extends Component {
       );
     }
 
-    const metros = this.state.ResponseData.Metros;
-    const left = this.findMetro(2, metros);
-    const right = this.findMetro(1, metros);
+    const metrosNorth = this.state.NorthEvents;
+    const metrosSouth = this.state.SouthEvents;
 
     return (
       <Widget>
         <Text>
           {this.props.heading}
         </Text>
-        {left ?
+        {metrosNorth ?
         <Heading>
-          <LineNumber>{left.LineNumber}</LineNumber> <Info>{left.Destination}: {left.DisplayTime}</Info>
+          <LineNumber>{NorthEvents.Line}</LineNumber> <Info>{NorthEvents.Name}: {NorthEvents.Value}</Info>
         </Heading>:null}
-        {right ?
+        {metrosSouth ?
         <Heading>
-          <LineNumber>{right.LineNumber}</LineNumber> <Info>{right.Destination}: {right.DisplayTime}</Info>
+          <LineNumber>{SouthEvents.Line}</LineNumber> <Info>{SouthEvents.Name}: {SouthEvents.Value}</Info>
         </Heading>:null}
       </Widget>
     );
