@@ -15,14 +15,24 @@ const Widget = styled.div`
   border-radius: 5px;
 `;
 
+const UnstyledWidget = styled.div`
+  overflow: hidden;
+`;
+
 export default ({
   children,
   title = '',
   className = '',
   width = [1, 1 / 2, 1 / 4],
-  style = {}
-}) => (
-  <Box width={width} p={5}>
-    <Widget className={className} style={style}>{children}</Widget>
-  </Box>
-);
+  style = {},
+  unstyled = false,
+  innerRef = null
+}) => {
+  const W = unstyled ? UnstyledWidget : Widget;
+
+  return (
+    <Box width={width} p={5}>
+      <W innerRef={innerRef} className={className} style={style}>{children}</W>
+    </Box>
+  );
+};
